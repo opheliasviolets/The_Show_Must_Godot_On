@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://bh4asjfqq01gl"]
+
+[ext_resource type="Texture2D" uid="uid://cqjbcgxxuconn" path="res://Icons/sun.webp" id="1_ejk8w"]
+[ext_resource type="Script" path="res://Scripts/Rotate.gd" id="1_iaibq"]
+[ext_resource type="Texture2D" uid="uid://c6g6mqbkpjqr5" path="res://Icons/spacebg.webp" id="2_hbl44"]
+[ext_resource type="Texture2D" uid="uid://c517wxn7cqy41" path="res://Icons/mars.png" id="3_8hm7j"]
+[ext_resource type="Texture2D" uid="uid://cda2sksf4q8x3" path="res://Icons/moon.png" id="3_yoc54"]
+[ext_resource type="Texture2D" uid="uid://crq3tnllmlbys" path="res://Icons/venus.png" id="4_j41ki"]
+[ext_resource type="Texture2D" uid="uid://d0xgxrkbu22hg" path="res://Icons/mercury.png" id="5_s843h"]
+[ext_resource type="Texture2D" uid="uid://bg6h6cfauwasf" path="res://Icons/jupiter.png" id="6_3ejho"]
+[ext_resource type="Texture2D" uid="uid://s8p4qtsb3lyo" path="res://Icons/bluemoon.png" id="6_w3oro"]
+[ext_resource type="Texture2D" uid="uid://d1r6i6fi4cu8u" path="res://Icons/earth2.png" id="8_8gp85"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_iaibq")
+
+[node name="Spacebg" type="Sprite2D" parent="."]
+position = Vector2(2114.75, 1022.75)
+scale = Vector2(7.84879, 6.43691)
+texture = ExtResource("2_hbl44")
+
+[node name="Sun" type="Sprite2D" parent="."]
+position = Vector2(663, 330)
+scale = Vector2(1.2925, -1.0675)
+texture = ExtResource("1_ejk8w")
+script = ExtResource("1_iaibq")
+rotation_speed = 0.005
+
+[node name="Mars" type="Sprite2D" parent="Sun"]
+position = Vector2(-229.385, -7.29004)
+scale = Vector2(0.11268, -0.130962)
+texture = ExtResource("3_8hm7j")
+script = ExtResource("1_iaibq")
+rotation_speed = 0.005
+
+[node name="Bluemoon" type="Sprite2D" parent="Sun/Mars"]
+position = Vector2(-484.209, 280.525)
+scale = Vector2(0.5902, 0.624194)
+texture = ExtResource("6_w3oro")
+script = ExtResource("1_iaibq")
+rotation_speed = 0.009
+
+[node name="Venus" type="Sprite2D" parent="Sun"]
+position = Vector2(1.37457, 192.628)
+scale = Vector2(0.0539255, -0.0492927)
+texture = ExtResource("4_j41ki")
+script = ExtResource("1_iaibq")
+rotation_speed = 0.005
+
+[node name="Mercury" type="Sprite2D" parent="Sun"]
+position = Vector2(131.271, -220.277)
+scale = Vector2(0.102651, -0.088222)
+texture = ExtResource("5_s843h")
+script = ExtResource("1_iaibq")
+rotation_speed = 0.005
+
+[node name="Jupiter" type="Sprite2D" parent="Sun"]
+position = Vector2(245.361, -46.0831)
+scale = Vector2(0.0631149, -0.0707427)
+texture = ExtResource("6_3ejho")
+script = ExtResource("1_iaibq")
+rotation_speed = 0.005
+
+[node name="Earth2" type="Sprite2D" parent="Sun"]
+position = Vector2(-128.24, -188.993)
+scale = Vector2(0.123192, -0.153484)
+texture = ExtResource("8_8gp85")
+script = ExtResource("1_iaibq")
+rotation_speed = 0.005
+
+[node name="Moon" type="Sprite2D" parent="Sun/Earth2"]
+position = Vector2(-640.598, 299.065)
+scale = Vector2(0.197226, 0.237254)
+texture = ExtResource("3_yoc54")
+script = ExtResource("1_iaibq")
+rotation_speed = 0.005
